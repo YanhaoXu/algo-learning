@@ -12,15 +12,34 @@ public class Array {
   }
 
   public int find(int index) {
-    if (index < 0 || index > count - 1) return -1;
+    if (index < 0 || index >= count) return -1;
     return data[index];
   }
 
   public boolean insert(int index, int value) {
+
+    if (count == size) return false;
+
+    if (index < 0 || index >= count) return false;
+
+    for (int i = count; i > index; i--) {
+      data[i] = data[i - 1];
+    }
+
+    data[index] = value;
+    count++;
     return true;
   }
 
   public boolean delete(int index) {
+
+    if (count == size) return false;
+
+    if (index < 0 || index >= count) return false;
+
+    for (int i = index+1; i < count; i++) {
+      data[i-1]=data[i]
+    }
 
     return true;
   }
