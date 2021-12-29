@@ -20,7 +20,7 @@ public class Array {
 
     if (count == size) return false;
 
-    if (index < 0 || index >= count) return false;
+    if (index < 0 || index > count) return false;
 
     for (int i = count; i > index; i--) {
       data[i] = data[i - 1];
@@ -37,10 +37,17 @@ public class Array {
 
     if (index < 0 || index >= count) return false;
 
-    for (int i = index+1; i < count; i++) {
-      data[i-1]=data[i]
+    for (int i = index + 1; i < count; i++) {
+      data[i - 1] = data[i];
     }
 
+    int[] arr = new int[count - 1];
+
+    for (int i = 0; i < count - 1; i++) {
+      arr[i] = data[i];
+    }
+    data = arr;
+    count--;
     return true;
   }
 
@@ -50,5 +57,6 @@ public class Array {
       System.out.printf("%d ", data[i]);
     }
     System.out.print("]");
+    System.out.println();
   }
 }
