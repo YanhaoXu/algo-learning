@@ -38,7 +38,7 @@ public class Array {
     if (index < 0 || index >= count) return false;
 
     for (int i = index+1; i < count; i++) {
-      data[i-1]=data[i]
+      data[i - 1] = data[i];
     }
 
     return true;
