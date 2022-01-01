@@ -33,8 +33,6 @@ public class Array {
 
   public boolean delete(int index) {
 
-    if (count == size) return false;
-
     if (index < 0 || index >= count) return false;
 
     for (int i = index + 1; i < count; i++) {
@@ -54,7 +52,8 @@ public class Array {
   public void printAll() {
     System.out.print("[");
     for (int i = 0; i < count; i++) {
-      System.out.printf("%d ", data[i]);
+      System.out.printf("%d", data[i]);
+      if (i != count - 1) System.out.print(" ");
     }
     System.out.print("]");
     System.out.println();

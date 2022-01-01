@@ -13,12 +13,17 @@ class ArrayTest {
     array.insert(4, 5);
     array.printAll();
 
-    array.find(3);
+    System.out.println(array.find(3));
 
     array.insert(1, 10);
     array.insert(-1, 10);
     array.insert(6, 10);
+    array.printAll();
     array.delete(6);
+    array.printAll();
+    array.delete(5);
+    array.printAll();
+    array.delete(0);
     array.printAll();
   }
 }
